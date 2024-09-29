@@ -1,13 +1,11 @@
-"""
-CP1404/CP5632 - Practical
-Broken program to determine score status
-"""
-
-# TODO: Fix this!
+import random
 
 def main():
     score = float(input("Enter score: "))
+    score_category = get_score_category()
     get_score_category(score)
+    random_number = random.randit(1, 100)
+    print(random_number)
 
 
 def get_score_category(score):
