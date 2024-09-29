@@ -1,1 +1,1 @@
-print("Welcome to VCS")
+print("Welcome to VCS!")
