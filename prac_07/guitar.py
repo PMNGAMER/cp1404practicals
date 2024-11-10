@@ -20,6 +20,6 @@ class Guitar:
         """Return True if the guitar is 50 or more years old, otherwise False."""
         return self.get_age() >= 50
 
-    def _it_(self,other):
+    def __lt__(self, other):
         """Define less than (<) operator to compare guitars by year."""
         return self.year < other.year
