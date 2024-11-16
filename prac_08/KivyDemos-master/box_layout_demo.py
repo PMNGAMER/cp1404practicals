@@ -1,6 +1,6 @@
 from kivy.app import App
 from kivy.lang import Builder
-
+print("HELLO")
 
 class BoxLayoutDemo(App):
     def build(self):
