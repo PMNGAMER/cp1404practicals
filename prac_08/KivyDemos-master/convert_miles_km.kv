@@ -1,0 +1,50 @@
+BoxLayout:
+    orientation: 'vertical'
+    padding: 10
+    spacing: 10
+
+    # Top section with TextInput and Up/Down buttons
+    BoxLayout:
+        orientation: 'horizontal'
+        spacing: 10
+
+        TextInput:
+            id: input_miles
+            text: "0"
+            font_size: 48
+            multiline: False
+            input_filter: 'float'
+            size_hint_x: 0.8
+            hint_text: "Enter miles"
+
+        BoxLayout:
+            orientation: 'vertical'
+            spacing: 5
+            size_hint_x: 0.2
+
+            Button:
+                text: "Up"
+                font_size: 24
+                on_press: app.handle_increment(input_miles.text, 1)
+
+            Button:
+                text: "Down"
+                font_size: 24
+                on_press: app.handle_increment(input_miles.text, -1)
+
+    # Middle section with Convert button
+    Button:
+        text: "Convert miles to km"
+        font_size: 24
+        on_press: app.handle_conversion(input_miles.text)
+        background_color: (0.5, 0.5, 0.5, 1)
+
+    # Bottom section with result label
+    Label:
+        text: f"{app.result} km"
+        font_size: 48
+        color: (1, 1, 0, 1)
+        halign: 'center'
+        valign: 'middle'
+        text_size: self.size
+        background_color: (0, 0, 0, 1)
